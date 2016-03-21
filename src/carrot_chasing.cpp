@@ -68,7 +68,6 @@ void odomCallback(const nav_msgs::OdometryConstPtr &msg){
     std::cout << "dtetha: " << dtethad << std::endl;
     
     if(d > 0.1){
-        std::cout <<"distancia grande" << std::endl;
             v.linear.x = 1.5;
             v.angular.z = 0.8*dtethad;
             if(v.angular.z > 1){
